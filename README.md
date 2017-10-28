@@ -47,6 +47,7 @@ travis open
 1. Visit https://packagist.org/packages/submit
 * Enter repository URL.
 * Set up GitHub Integrations & services.
+* Check if the package is distributed: `composer show -a suin/skeleton`
 
 <!-- Badges -->
 [travis-ci]: https://travis-ci.org/suin/php-skeleton
