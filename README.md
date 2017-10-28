@@ -1,6 +1,6 @@
 Skeleton
 ================
-[![travis-ci-badge]][travis-ci] ![packagist-dt-badge]
+[![travis-ci-badge]][travis-ci] [![packagist-dt-badge]][packagist]
 
 This is where your library description should go. Try to limit it to a paragraph or two.
 
@@ -51,4 +51,5 @@ travis open
 <!-- Badges -->
 [travis-ci]: https://travis-ci.org/suin/php-skeleton
 [travis-ci-badge]: https://img.shields.io/travis/suin/php-skeleton.svg?style=flat-square
+[packagist]: https://packagist.org/packages/suin/skeleton
 [packagist-dt-badge]: https://img.shields.io/packagist/dt/suin/skeleton.svg?style=flat-square
