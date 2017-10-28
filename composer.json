@@ -1,0 +1,31 @@
+{
+    "name": "suin/skeleton",
+    "description": "PHP project.",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "suin",
+            "email": "suinyeze@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Suin\\Skeleton\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "codecept run",
+        "configure-commit-template": "git config --add commit.template .gitmessage"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.3"
+    }
+}
