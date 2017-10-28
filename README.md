@@ -41,3 +41,9 @@ travis enable
 : Visit CI dashboard
 travis open
 ```
+
+### Submitting this package to Packagist
+
+1. Visit https://packagist.org/packages/submit
+* Enter repository URL.
+* Set up GitHub Integrations & services.
