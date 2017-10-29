@@ -1,5 +1,6 @@
 * text=auto eol=lf
 
+.envrc export-ignore
 .gitattributes export-ignore
 .github/ export-ignore
 .gitignore export-ignore
@@ -9,5 +10,7 @@ CHANGELOG.md export-ignore
 LICENSE.md export-ignore
 README.md export-ignore
 codeception.yml export-ignore
+docker/ export-ignore
+docker-compose.yml export-ignore
 docs/ export-ignore
 tests/ export-ignore
