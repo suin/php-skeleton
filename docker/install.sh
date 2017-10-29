@@ -7,7 +7,12 @@ set -eux
 
 : "Install Xdebug" && {
   docker-php-source extract
-  pecl install xdebug
+  case $PHP_VERSION in
+    5.2.*|5.3.*) XDEBUG=xdebug-2.2.7;;
+          5.4.*) XDEBUG=xdebug-2.4.1;;
+  	          *) XDEBUG=xdebug;;
+  esac
+  pecl install $XDEBUG
   docker-php-ext-enable xdebug
   docker-php-source delete
   echo "xdebug.remote_enable=on" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini

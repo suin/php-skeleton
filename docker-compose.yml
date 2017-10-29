@@ -18,3 +18,11 @@ services:
   php55:
     <<: *base
     build: {dockerfile: php55/Dockerfile, context: docker}
+
+  php54:
+    <<: *base
+    build: {dockerfile: php54/Dockerfile, context: docker}
+
+  php53:
+    <<: *base
+    build: {dockerfile: php53/Dockerfile, context: docker}
