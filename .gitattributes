@@ -39,8 +39,8 @@
 CHANGELOG.md export-ignore
 codeception.yml export-ignore
 docker-compose.yml export-ignore
-docker/ export-ignore
-docs/ export-ignore
+docker/ export-ignore linguist-vendored
+docs/ export-ignore linguist-documentation
 LICENSE.md export-ignore
 README.md export-ignore
 tests/ export-ignore
