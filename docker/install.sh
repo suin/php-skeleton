@@ -1,3 +1,4 @@
+#!/usr/bin/env sh
 set -eux
 
 : "Install build tools" && {
@@ -7,23 +8,33 @@ set -eux
 
 : "Install Xdebug" && {
   docker-php-source extract
-  case $PHP_VERSION in
+  case "$PHP_VERSION" in
     5.2.*|5.3.*) XDEBUG=xdebug-2.2.7;;
           5.4.*) XDEBUG=xdebug-2.4.1;;
+          7.2.*) XDEBUG=xdebug-2.6.0alpha1;;
   	          *) XDEBUG=xdebug;;
   esac
-  pecl install $XDEBUG
+  pecl install "$XDEBUG"
   docker-php-ext-enable xdebug
   docker-php-source delete
-  echo "xdebug.remote_enable=on" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-  echo "xdebug.remote_autostart=off" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-  echo "xdebug.remote_port=9000" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-  echo "xdebug.remote_handler=dbgp" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-  echo "xdebug.remote_connect_back=0" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 }
 
 : "Install Composer" && {
   curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+  : "Speed up Composer" && {
+    : "Use Japan mirror server if the region is Japan" && {
+      [[ $(curl -s https://ipapi.co/country) == "JP" ]] &&
+        composer config -g repos.packagist composer https://packagist.jp
+    }
+    : "Add parallel install plugin" && {
+      composer global require hirak/prestissimo
+    }
+  }
+}
+
+: "Make sandbox directory" && {
+    mkdir /copy
 }
 
 : "Cleanup" && {

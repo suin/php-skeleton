@@ -1,8 +1,20 @@
 FROM php:5.6-alpine
 
-ADD install.sh /install.sh
-RUN sh /install.sh && rm /install.sh
-COPY php.ini /usr/local/etc/php/conf.d/docker-php-common.ini
+# Define environment variables
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
-# Xdebug port
-EXPOSE 9000
+# Build PHP environment
+COPY install.sh /install.sh
+RUN sh /install.sh && rm /install.sh
+
+# Change workding directory
+WORKDIR /project-copy
+
+# Project specific files
+COPY php.ini /usr/local/etc/php/conf.d/docker-php-common.ini
+COPY setup-project.sh /setup-project.sh
+COPY copy-project.sh /usr/local/bin/copy-project
+RUN sh /setup-project.sh && rm /setup-project.sh
+
+# Project directory
+VOLUME ["/project"]

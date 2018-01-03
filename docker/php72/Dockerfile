@@ -1,4 +1,4 @@
-FROM greencape/php:5.3-alpine
+FROM php:7.2-alpine
 
 # Define environment variables
 ENV COMPOSER_ALLOW_SUPERUSER=1

@@ -1,11 +1,14 @@
 version: '3'
 services:
-  php71: &base
-    build: {dockerfile: php71/Dockerfile, context: docker}
-    command: composer test
+  php72: &base
+    build: {dockerfile: php72/Dockerfile, context: docker}
+    command: copy-project composer test
     volumes:
-      - .:/app
-    working_dir: /app
+      - .:/project:ro
+
+  php71:
+    <<: *base
+    build: {dockerfile: php71/Dockerfile, context: docker}
 
   php70:
     <<: *base

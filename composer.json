@@ -1,31 +1,40 @@
 {
-    "name": "suin/skeleton",
-    "description": "PHP project.",
-    "keywords": [],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "suin",
-            "email": "suinyeze@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=5.4"
-    },
-    "autoload": {
-        "psr-4": {
-            "Suin\\Skeleton\\": "src/"
-        }
-    },
-    "minimum-stability": "stable",
-    "config": {
-        "sort-packages": true
-    },
-    "scripts": {
-        "test": "codecept run",
-        "configure-commit-template": "git config --add commit.template .gitmessage"
-    },
-    "require-dev": {
-        "codeception/codeception": "^2.3"
+  "name": "suin/skeleton",
+  "description": "PHP project.",
+  "keywords": [],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "suin",
+      "email": "suinyeze@gmail.com"
     }
+  ],
+  "require": {
+    "php": ">=7.1"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.9",
+    "phpunit/phpunit": "^6.5",
+    "suin/livexample": "^1.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Suin\\Skeleton\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Suin\\Skeleton\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "config": {
+    "sort-packages": true
+  },
+  "scripts": {
+    "test": "phpunit --colors=always",
+    "test-in-ci": "phpunit --coverage-text",
+    "example": "php -d auto_prepend_file=vendor/autoload.php -d xdebug.overload_var_dump=0",
+    "configure-commit-template": "git config --add commit.template .gitmessage"
+  }
 }
