@@ -15,7 +15,8 @@
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^2.9",
     "phpunit/phpunit": "^6.5",
-    "suin/livexample": "^1.2"
+    "suin/livexample": "^1.2",
+    "suin/php-cs-fixer-rules": "^1.0"
   },
   "autoload": {
     "psr-4": {
@@ -34,6 +35,8 @@
   "scripts": {
     "test": "phpunit --colors=always",
     "test-in-ci": "phpunit --coverage-text",
+    "format": "php-cs-fixer fix --ansi",
+    "format-preview": "php-cs-fixer fix --ansi --dry-run --diff --diff-format=udiff --verbose",
     "example": "php -d auto_prepend_file=vendor/autoload.php -d xdebug.overload_var_dump=0",
     "configure-commit-template": "git config --add commit.template .gitmessage"
   }
