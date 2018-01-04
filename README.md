@@ -1,6 +1,6 @@
 Skeleton
 ================
-[![travis-ci-badge]][travis-ci] [![packagist-dt-badge]][packagist]
+[![travis-ci-badge]][travis-ci] [![packagist-dt-badge]][packagist] [![license-badge]][license] [![release-version-badge]][packagist] ![php-version-badge]
 
 This is where your library description should go. Try to limit it to a paragraph or two.
 
@@ -15,10 +15,6 @@ $ composer require suin/skeleton
 ``` bash
 $ composer test
 ```
-
-## License
-
-This library is licensed under the MIT license. Please see [LICENSE](LICENSE.md) for more details.
 
 ## Changelog
 
@@ -59,3 +55,7 @@ travis open
 [travis-ci-badge]: https://img.shields.io/travis/suin/php-skeleton.svg?style=flat-square
 [packagist]: https://packagist.org/packages/suin/skeleton
 [packagist-dt-badge]: https://img.shields.io/packagist/dt/suin/skeleton.svg?style=flat-square
+[license]: LICENSE.md
+[license-badge]: https://img.shields.io/github/license/suin/php-skeleton.svg?style=flat-square
+[php-version-badge]: https://img.shields.io/packagist/php-v/suin/skeleton.svg?style=flat-square
+[release-version-badge]: https://img.shields.io/packagist/v/suin/skeleton.svg?style=flat-square&label=release
