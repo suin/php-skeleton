@@ -1,6 +1,6 @@
 Skeleton
 ================
-[![travis-ci-badge]][travis-ci] [![packagist-dt-badge]][packagist] [![license-badge]][license] [![release-version-badge]][packagist] ![php-version-badge]
+[![travis-ci-badge]][travis-ci] [![packagist-dt-badge]][packagist] [![license-badge]][license] [![release-version-badge]][packagist] [![code-climate-maintainability-badge]][code-climate] [![code-climate-test-coverage-badge]][code-climate] ![php-version-badge]
 
 This is where your library description should go. Try to limit it to a paragraph or two.
 
@@ -41,6 +41,9 @@ Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for more details.
 [license-badge]: https://img.shields.io/github/license/suin/php-skeleton.svg?style=flat-square
 [php-version-badge]: https://img.shields.io/packagist/php-v/suin/skeleton.svg?style=flat-square
 [release-version-badge]: https://img.shields.io/packagist/v/suin/skeleton.svg?style=flat-square&label=release
+[code-climate]: https://codeclimate.com/github/suin/php-skeleton
+[code-climate-maintainability-badge]: https://img.shields.io/codeclimate/maintainability/suin/php-skeleton.svg?style=flat-square
+[code-climate-test-coverage-badge]: https://img.shields.io/codeclimate/c/suin/php-skeleton.svg?style=flat-square
 
 > **Followings should be deleted when you publish your library.**
 >
@@ -67,8 +70,8 @@ Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for more details.
 >         * .gitignore
 >         * .gitmessage
 >     * Travis CI integration
->     * Code coverage reports powered by [Codeclimate](https://codeclimate.com/)
->     * Automated code review powered by [Codeclimate](https://codeclimate.com/)
+>     * Code coverage reports powered by [Code Climate](https://codeclimate.com/)
+>     * Automated code review powered by [Code Climate](https://codeclimate.com/)
 > * Reusable documents
 >     * README.md
 >         * Badges powered by [shields.io](https://shields.io/)
