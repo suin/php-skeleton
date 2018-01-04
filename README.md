@@ -67,6 +67,8 @@ Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for more details.
 >         * .gitignore
 >         * .gitmessage
 >     * Travis CI integration
+>     * Code coverage reports powered by [Codeclimate](https://codeclimate.com/)
+>     * Automated code review powered by [Codeclimate](https://codeclimate.com/)
 > * Reusable documents
 >     * README.md
 >         * Badges powered by [shields.io](https://shields.io/)
@@ -108,3 +110,14 @@ Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for more details.
 > * Enter repository URL.
 > * Set up GitHub Integrations & services.
 > * Check if the package is distributed: `composer show -a suin/skeleton`
+>
+> ## Codeclimate code coverage setting
+> 
+> * Add repository to Codeclimate.
+> * Get test reporter ID from "Settings" → "Test coverage" → "TEST REPORTER ID".
+> * Set Travis CI environment.
+>
+> ```bash
+> travis env set CC_TEST_REPORTER_ID <your reporter id>
+> ```
+> 
